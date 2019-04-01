@@ -7,10 +7,7 @@ vector<string> split_string(string);
 // Complete the plusMinus function below.
 void plusMinus(vector<int> arr) {
     float i = arr.size();
-    /*while (arr[i]) {
-        i++;
-    }
-    */
+    
     int countNegative = 0;
     int countPositive = 0;
     int countZero = 0;
