@@ -1,0 +1,16 @@
+int sockMerchant(int n, int ar_count, int* ar) {
+   int count = 0;
+   int rep = 101;
+    for (int i = 0; i < n; i++){
+        for (int m = i + 1; m < n; m++){
+            if (ar[i] == ar[m]){
+            ar[m] = rep;
+            //ar[i] = 0;
+            count++;
+            rep++;
+            break;
+            }
+        }
+        }
+    return (count);
+    }
