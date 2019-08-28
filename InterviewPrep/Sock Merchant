@@ -1,23 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+int cmpfunc (const void * a, const void * b) {
+   return ( *(int*)a - *(int*)b );
+}
    
-   int sockMerchant(int n, int ar_count, int* ar) {
+int sockMerchant(int n, int ar_count, int* ar) {
+   qsort(ar, n, sizeof(int), cmpfunc); //Library function to sort the array
    int count = 0;
    int rep = 101;
-    for (int i = 0; i < n; i++){
-        for (int m = i + 1; m < n; m++){
-            if (ar[i] == ar[m]){
+    for (int i = 0; i < (n - 1); i++){
+        int m = i + 1;
+        if (ar[i] == ar[m]){
             ar[m] = rep;
-            //ar[i] = 0;
             count++;
             rep++;
-            break;
-            }
         }
-        }
+    }
     return (count);
     }
-    
+
 
 /*
 ~~~~Main For Testing~~~
@@ -34,3 +36,25 @@ sockMerchant(10, 9, p);
   return 0;
 }
 */
+
+
+   /*
+   
+   Alternate Solution
+int sockMerchant(int n, int ar_count, int* ar) {
+   int count = 0;
+   int rep = 101;
+    for (int i = 0; i < n; i++){
+        for (int m = i + 1; m < n; m++){
+            if (ar[i] == ar[m]){
+            ar[m] = rep;
+            //ar[i] = 0;
+            count++;
+            rep++;
+            break;
+            }
+        }
+        }
+    return (count);
+    }
+    */
