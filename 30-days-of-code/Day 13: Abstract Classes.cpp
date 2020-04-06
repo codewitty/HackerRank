@@ -1,3 +1,9 @@
+/* 
+Problem statement :
+https://www.hackerrank.com/challenges/30-abstract-classes/problem
+*/
+
+
 // Write your MyBook class here
 class MyBook: public Book {
     public:
