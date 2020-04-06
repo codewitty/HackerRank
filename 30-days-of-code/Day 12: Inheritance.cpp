@@ -1,3 +1,5 @@
+// Question Taken from https://www.hackerrank.com/challenges/30-inheritance/problem
+
 #include <iostream>
 #include <vector>
 
