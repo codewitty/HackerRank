@@ -52,3 +52,33 @@ int main() {
     
     return 0;
 }
+
+/*
+// Driver Code for testing
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+int computeDifference(vector<int> elements){
+        int maxInt = 0;
+
+        for (int i = 0; i < elements.size() - 1; ++i){
+          for(int j = i + 1; j < elements.size(); ++j){
+            maxInt = max(maxInt, abs(elements[i] - elements[j]));
+          }
+        }
+        return maxInt;
+
+}
+
+int main() {
+  vector <int> a = {8, 19, 3, 2, 7};
+    cout << computeDifference(a);
+    
+    return 0;
+}
+*/
+
