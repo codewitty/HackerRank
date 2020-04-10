@@ -1,3 +1,5 @@
+// Taken from: https://www.hackerrank.com/challenges/grading/problem
+
 vector<int> gradingStudents(vector<int> grades) {
     vector<int> res;
     for (int i = 0; i < grades.size(); ++i) {
